@@ -1,0 +1,42 @@
+{
+  "name": "pi-engineering-kit",
+  "version": "0.1.0",
+  "description": "Portable engineering policy, GitHub workflow skills, safety guard, and diagnostics for Pi",
+  "type": "module",
+  "license": "MIT",
+  "keywords": [
+    "pi-package",
+    "pi",
+    "coding-agent",
+    "github"
+  ],
+  "engines": {
+    "node": ">=22.19.0"
+  },
+  "pi": {
+    "extensions": [
+      "./extensions/*.ts"
+    ],
+    "skills": [
+      "./skills"
+    ],
+    "prompts": [
+      "./prompts/*.md"
+    ]
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*"
+  },
+  "devDependencies": {
+    "@earendil-works/pi-coding-agent": "0.87.1",
+    "@types/node": "^22.19.0",
+    "typescript": "^5.9.3"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "node --test test/*.test.mjs",
+    "test:compat": "node --test test/compatibility.test.mjs",
+    "audit": "node scripts/audit.mjs",
+    "check": "npm run typecheck && npm test && npm run audit"
+  }
+}

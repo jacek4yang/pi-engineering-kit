@@ -1,0 +1,21 @@
+name: Pi Latest Canary
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 4 * * 1"
+
+jobs:
+  latest-pi:
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22.19.0
+          cache: npm
+      - run: npm ci
+      - name: Install current Pi release without changing the lockfile
+        run: npm install --no-save --package-lock=false @earendil-works/pi-coding-agent@latest
+      - run: npm run check
