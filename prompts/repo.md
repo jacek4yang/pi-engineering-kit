@@ -1,0 +1,1 @@
+Bootstrap repository $ARGUMENTS through a verified `ready-for-issues` state. Use the `github-operator` repository bootstrap guidance, including safe visibility defaults, plan-aware governance, and conservative runner selection. Do not implement unrelated product features.

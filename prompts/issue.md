@@ -1,1 +1,1 @@
-Work issue $ARGUMENTS end to end. Inspect the issue and repository state, implement the smallest robust fix, validate it, and prepare the appropriate GitHub result.
+Complete one GitHub Issue $ARGUMENTS using `github-operator`. By default, finish with its feature branch pushed and PR open with required CI green. Merge only when explicitly authorized by `--merge` or equivalent language, then verify the PR, Issue, and remote default branch.

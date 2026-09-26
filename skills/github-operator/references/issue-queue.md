@@ -2,6 +2,8 @@
 
 Use this reference only for a multi-Issue or queue request. Interpret `$ARGUMENTS` naturally: accept numbers, Issue URLs, explicit order, and numeric ranges. Expand `1-14` in ascending numeric order unless the user gives another order. `--merge` or equally explicit natural language authorizes ordinary policy-respecting merge for every Issue in this queue; without explicit authorization, do not merge.
 
+If repository governance becomes relevant, use the plan-aware bootstrap guidance and known environment facts. Do not repeatedly call protection APIs already known to be unavailable; workflow-enforced branch/PR/CI discipline still applies.
+
 ## Invariants
 
 - Exactly one Issue is active at a time. Never implement or actively modify multiple queue worktrees in parallel.

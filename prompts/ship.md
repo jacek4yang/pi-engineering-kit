@@ -1,0 +1,1 @@
+Deliver the current local work $ARGUMENTS using the internal `finish-task` skill and `github-operator` delivery guidance. By default, finish with required CI green and the PR open. Merge only when explicitly authorized by `--merge` or equivalent language, then verify the remote result.
