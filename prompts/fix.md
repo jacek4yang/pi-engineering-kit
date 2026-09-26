@@ -1,1 +1,1 @@
-Reproduce and fix $ARGUMENTS. Use the smallest distinguishing diagnostic, make a focused change, and verify the original failure is resolved.
+Fix $ARGUMENTS using the `debug-failure` skill. Reproduce, diagnose narrowly, make a focused change, and verify it locally. Do not commit, push, open a PR, or merge unless the request explicitly includes delivery intent.

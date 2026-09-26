@@ -14,5 +14,6 @@ Load only the reference needed for the current phase:
 - Multiple Issues as a strictly sequential queue: [references/issue-queue.md](references/issue-queue.md)
 - Pull request and merge: [references/pull-request.md](references/pull-request.md)
 - Actions failures: [references/actions-ci.md](references/actions-ci.md)
+- Delivering current local work: [references/delivery.md](references/delivery.md)
 
 An explicit request to create/fix a PR and merge it authorizes the ordinary sequence through merge. Never use `--admin` unless the user explicitly requests a protection bypass. Verify final remote state.

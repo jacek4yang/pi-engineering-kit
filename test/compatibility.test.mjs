@@ -29,7 +29,7 @@ test("public Pi loader discovers extensions, skills, and prompts", async () => {
   assert.equal(extensions.errors.length, 0, JSON.stringify(extensions.errors));
   assert.equal(extensions.extensions.length, 3);
   assert.deepEqual(skills.skills.map((skill) => skill.name).sort(), ["debug-failure", "finish-task", "github-operator"]);
-  assert.deepEqual(prompts.prompts.map((prompt) => prompt.name).sort(), ["finish", "fix", "issue", "issues", "review"]);
+  assert.deepEqual(prompts.prompts.map((prompt) => prompt.name).sort(), ["fix", "issue", "issues", "repo", "review", "ship"]);
   assert.equal(loader.getSystemPrompt(), undefined);
   assert.deepEqual(loader.getAppendSystemPrompt(), []);
   assert.match(VERSION, /^0\./);

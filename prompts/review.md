@@ -1,1 +1,1 @@
-Review $ARGUMENTS for correctness, regressions, security, and missing tests. Lead with actionable findings tied to exact files and evidence.
+Review $ARGUMENTS read-only for correctness, regressions, security, edge cases, missing tests, and material architecture violations. Lead with evidence-based actionable findings; if none, say so and note meaningful validation uncertainty. Modify files only when explicitly asked to fix confirmed findings.
