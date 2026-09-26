@@ -11,6 +11,7 @@ Load only the reference needed for the current phase:
 
 - Repository creation/settings: [references/repo-bootstrap.md](references/repo-bootstrap.md)
 - Issue to branch/worktree: [references/issue-task.md](references/issue-task.md)
+- Multiple Issues as a strictly sequential queue: [references/issue-queue.md](references/issue-queue.md)
 - Pull request and merge: [references/pull-request.md](references/pull-request.md)
 - Actions failures: [references/actions-ci.md](references/actions-ci.md)
 

@@ -1,0 +1,1 @@
+Execute GitHub issues $ARGUMENTS as a strictly sequential queue. Use the `github-operator` Issue queue guidance: re-read GitHub state before each Issue, complete it through the requested delivery or merge state, refresh from the remote default branch, then continue. Stop only when the queue is complete or a genuine blocker is proven.
