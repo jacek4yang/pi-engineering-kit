@@ -7,13 +7,13 @@ Pi remains the runtime and owns providers, native tools, resource loading, skill
 ## Install
 
 ```sh
-pi install git:github.com/jacek4yang/pi-engineering-kit@v0.1.0
+pi install git:github.com/jacek4yang/pi-engineering-kit@v0.1.1
 ```
 
 Run `/reload` in an active Pi session, or restart Pi. Check the installation with `pi list` and run `/kit-doctor` for a read-only compatibility report. Update a moving git ref with `pi update`; this tagged install stays pinned by design. Remove it with:
 
 ```sh
-pi remove git:github.com/jacek4yang/pi-engineering-kit@v0.1.0
+pi remove git:github.com/jacek4yang/pi-engineering-kit@v0.1.1
 ```
 
 ## Features
@@ -21,7 +21,8 @@ pi remove git:github.com/jacek4yang/pi-engineering-kit@v0.1.0
 - The engineering policy asks Pi to carry implementation work through investigation, implementation, and verification while keeping exploration and output focused. It adds LSP guidance only when `lsp_diagnostics` is active.
 - The GitHub guard permits ordinary branches, commits, pushes, issues, PRs, checks, and authorized merges. It blocks obvious destructive or bypass commands such as default-branch force pushes, `gh pr merge --admin`, repository deletion, `git reset --hard`, and `git clean -fd`.
 - `/kit-doctor` reports OS, Node, Pi, git, GitHub CLI, active tools/model, and optional developer tools without changing the machine.
-- `/issue`, `/fix`, `/review`, and `/finish` are short prompt templates.
+- `/issue`, `/fix`, `/review`, and `/finish` are short prompt templates. Use `/issue` for normal single-Issue work.
+- `/issues` runs a strictly serial Issue queue, with a separate PR for each Issue. For example, `/issues 1-5 --merge` or `/issues 7 9 12 --merge`. When merge is authorized, it verifies each PR is merged before starting the next Issue from refreshed remote state. Progress is reconstructed from GitHub, so re-running can recover completed work; an unresolved explicit dependency stops the queue, and CI repair attempts are bounded.
 - `github-operator` progressively loads guidance for repository bootstrap, issue tasks, PRs, Actions failures, safe merges, and verification. `debug-failure` and `finish-task` cover focused diagnosis and completion checks.
 
 The GitHub workflow uses authenticated `gh` commands with structured JSON, targeted failed logs, head-SHA checks before merge, and post-merge verification. Normal merges follow repository protection; the skill never instructs Pi to use `--admin` unless a user explicitly requests a bypass.
